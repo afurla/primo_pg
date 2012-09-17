@@ -1,9 +1,13 @@
 PrimoPg::Application.routes.draw do
-  get "static_pages/home"
+	root to: 'static_pages#home'
+	match '/blog',   to: 'static_pages#blog'
+	match '/foto',   to: 'static_pages#foto'
+	
+	
+  #get "static_pages/home"
+#  get "static_pages/blog"
 
-  get "static_pages/blog"
-
-  get "static_pages/foto"
+#  get "static_pages/foto"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

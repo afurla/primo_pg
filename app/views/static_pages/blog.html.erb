@@ -1,2 +1,15 @@
-<h1>StaticPages#blog</h1>
-<p>Find me in app/views/static_pages/blog.html.erb</p>
+<% provide(:title, "Blog") %>
+<div class="center hero-unit">
+
+<h1>Primo esemprio | Blog</h1>
+
+
+	<h2>
+	This is the BLOG page of the 'Primo PG ' application 
+		E questo e' un hyperlink <a href="http://google.com"> to Google </a>
+	</h2>
+
+	<%= link_to "Iscriviti adesso",   '#', class: "btn btn-large btn-primary" %>
+
+
+<p>questo e' del testo entro in un paragrafo </p>

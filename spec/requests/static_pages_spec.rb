@@ -1,18 +1,26 @@
 require 'spec_helper'
 
 describe "StaticPages" do
+	
+	subject {page}
 	describe "Home Page" do 
-	it "Should have the right title" do 
-		visit '/static_pages/home'
-		page.should have_selector('title', text: "Primo_PG | Home")
-		end 
-			
-	it "should have the content 'home' " do
-		visit '/static_pages/home'
-		page.should have_content('home')
+	before {visit root_path} 
+
+		it {should have_selector('title', text: "Primo_PG | Home") }
+		it {should have_selector('h1', text: "Home")}
 		end
 
-# Additional test if we won't have the "home' visualized in the homepage 
+	describe "Foto Page" do 
+	before {visit foto_path}
 
-	end
+		it {should have_selector('title', text: "Primo_PG | Foto") }
+	  it {should have_selector('h1', text: "Foto") }
+			end 
+	
+	describe 'Blog Page' do 
+	before {visit blog_path}
+		
+		it {should have_selector('title', text: "Primo_PG | Blog") }
+	  it {should have_selector('h1', text: "Blog") }
+			end 
 end

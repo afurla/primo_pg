@@ -1,6 +1,13 @@
 <% provide(:title, 'Home') %>
-	<h1>Primo esempio in Postgresql , home</h1>
-	<p>This is the home page of the 'Primo PG ' application 
-		E questo e' un hyperlink <a href="www.google.com"> to Google </a>
-	</p>
+<div class="center hero-unit">
+	<h1>Primo esempio in Postgresql | Home page </h1>
 
+	<h2>
+	This is the home page of the 'Primo PG ' application 
+		E questo e' un hyperlink <a href="http://google.com"> to Google </a>
+	</h2>
+
+	<%= link_to "Iscriviti adesso",   '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
