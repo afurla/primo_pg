@@ -1,8 +1,10 @@
 PrimoPg::Application.routes.draw do
+  get "users/new"
+
 	root to: 'static_pages#home'
 	match '/blog',   to: 'static_pages#blog'
 	match '/foto',   to: 'static_pages#foto'
-	
+	match '/signup', to: 'users#new'	
 	
   #get "static_pages/home"
 #  get "static_pages/blog"
