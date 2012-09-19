@@ -104,5 +104,14 @@ describe User do
 			specify { user_for_invalid_password.should be_false }
 		end
 	end
+	
+	describe "email with mixed cases " do 
+		let(:mixemail) { "CipPAliPpa@ExamPLe.cOM"}
+		it "should be saved all as lower case" do 
+			@user.email = mixemail
+			@user.save 
+			@user.reload.email.should == mixemail.downcase
+		end 
+	end				
 
 end
