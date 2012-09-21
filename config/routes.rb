@@ -1,6 +1,7 @@
 PrimoPg::Application.routes.draw do
-  get "users/new"
+#  get "users/new"
 
+	resources :users
 	root to: 'static_pages#home'
 	match '/blog',   to: 'static_pages#blog'
 	match '/foto',   to: 'static_pages#foto'
