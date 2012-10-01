@@ -2,10 +2,14 @@ PrimoPg::Application.routes.draw do
 #  get "users/new"
 
 	resources :users
+	resources :sessions, only: [:new, :create, :desctroy]
+
 	root to: 'static_pages#home'
 	match '/blog',   to: 'static_pages#blog'
 	match '/foto',   to: 'static_pages#foto'
 	match '/signup', to: 'users#new'	
+	match '/signin', to: 'sessions#new'
+	match '/signout', to: 'sessions#destroy', via: :delete
 	
   #get "static_pages/home"
 #  get "static_pages/blog"
